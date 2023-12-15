@@ -1,0 +1,12 @@
+{
+  "extends": [
+    "@rocketseat/eslint-config/node",
+    "@rocketseat/eslint-config/react"
+  ],
+  "rules": {
+    "no-useless-constructor": "off",
+    "no-empty-function": "off",
+    "no-unused-vars": "off",
+    "no-useless-return": "off"
+  }
+}
