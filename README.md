@@ -2,7 +2,8 @@
 
 # Tecnologia: React + Vite + TypeScript
 
-# Bibliotecas: 
+# Bibliotecas:
 
 - StyledComponents
 - @types/styled-components
+- Phospor React
