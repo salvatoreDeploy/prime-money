@@ -4,7 +4,7 @@ export const GlobalStyle = createGlobalStyle`
   *{
     margin: 0;
     padding: 0;
-    box-shadow: border-box;
+    box-sizing: border-box;
   }
 
   :focus{
@@ -19,6 +19,6 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body, input, text-area, button{
-    font-family: 400 1rem 'Roboto', sans-serif;
+    font: 400 1rem 'Roboto', sans-serif;
   }
 `
