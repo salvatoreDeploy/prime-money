@@ -1,5 +1,5 @@
 import { Header } from '../../components/Header'
-import { SearchFarm } from '../../components/SearchForm/SearchForm'
+import { SearchFarm } from '../../components/SearchForm'
 import { Summary } from '../../components/Sumary'
 import {
   PriceHighLight,
