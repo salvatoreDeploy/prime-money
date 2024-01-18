@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+import { useContext, useEffect, useState } from 'react'
 import { Header } from '../../components/Header'
 import { SearchFarm } from '../../components/SearchForm'
 import { Summary } from '../../components/Sumary'
@@ -6,8 +8,11 @@ import {
   TransactionsTable,
   TrasactionsContainer,
 } from './style'
+import { TransactionsContext } from '../../contexts/TransactionsContext'
 
 export function Transactions() {
+  const { transactions } = useContext(TransactionsContext)
+
   return (
     <div>
       <Header />
@@ -18,41 +23,20 @@ export function Transactions() {
 
         <TransactionsTable>
           <tbody>
-            <tr>
-              <td width="50%">Desenvolvimento de site</td>
-              <td>
-                <PriceHighLight variant="income">R$ 12.000,00</PriceHighLight>
-              </td>
-              <td>Venda</td>
-              <td>13/04/2023</td>
-            </tr>
-
-            <tr>
-              <td width="50%">Desenvolvimento de site</td>
-              <td>
-                <PriceHighLight variant="income">R$ 12.000,00</PriceHighLight>
-              </td>
-              <td>Venda</td>
-              <td>13/04/2023</td>
-            </tr>
-
-            <tr>
-              <td width="50%">Desenvolvimento de site</td>
-              <td>
-                <PriceHighLight variant="outcome">R$- 12.000,00</PriceHighLight>
-              </td>
-              <td>Alimentação</td>
-              <td>02/04/2023</td>
-            </tr>
-
-            <tr>
-              <td width="50%">Desenvolvimento de site</td>
-              <td>
-                <PriceHighLight variant="income">R$ 12.000,00</PriceHighLight>
-              </td>
-              <td>Venda</td>
-              <td>13/04/2023</td>
-            </tr>
+            {transactions.map((transaction) => {
+              return (
+                <tr key={transaction.id}>
+                  <td width="50%">{transaction.description}</td>
+                  <td>
+                    <PriceHighLight variant={transaction.type}>
+                      {transaction.price}
+                    </PriceHighLight>
+                  </td>
+                  <td>{transaction.category}</td>
+                  <td>{transaction.created_at}</td>
+                </tr>
+              )
+            })}
           </tbody>
         </TransactionsTable>
       </TrasactionsContainer>

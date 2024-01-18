@@ -7,4 +7,5 @@
 - StyledComponents
 - @types/styled-components
 - Phospor React
-- Radix 
+- Radix
+- JSON Server
