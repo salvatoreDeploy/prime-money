@@ -9,3 +9,6 @@
 - Phospor React
 - Radix
 - JSON Server
+- React-Hook-Form
+- Zod
+- @hookform/resolvers
