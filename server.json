@@ -23,6 +23,22 @@
       "category": "Lazer Videos",
       "price": 168,
       "created_at": "2024-01-17T13:52:07.427Z"
+    },
+    {
+      "description": "Cartão Crédito ",
+      "price": 2768,
+      "category": "Contas ",
+      "type": "outcome",
+      "created_at": "2024-01-20T23:08:35.775Z",
+      "id": 4
+    },
+    {
+      "description": "Salario Vivo",
+      "price": 2120,
+      "category": "Salario",
+      "type": "income",
+      "created_at": "2024-01-21T00:40:38.272Z",
+      "id": 5
     }
   ]
 }
